@@ -1,0 +1,27 @@
+h1{
+    border: 5px solid lightgrey;
+    border-bottom: 10px solid yellowgreen;
+    padding: 30px;
+}
+a{
+    text-decoration: none;
+    /* color: inherit; */
+}
+body{
+    font-family: 'Bungee', cursive;
+}
+@media all and (min-width: 600px){ 
+    #container{
+        display: grid;
+        grid-template-columns: 180px 1fr;
+    }
+    /* body{
+        background-color:lavender;
+    } */
+}
+@media all and (max-width: 600px) {
+    body{
+        background-color:skyblue !important;
+        /* !important를 쓰면 우선순위가 높아진다 */
+    }
+}
