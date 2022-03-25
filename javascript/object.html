@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <!-- 객체지향 맛보기 -->
+        <h1>Object</h1>
+        <script>
+            // js는 배열과 객체에서 자매같다. 
+
+            let student = ['egoing', 'duru'];
+            console.log(student[0], student[1]);
+
+            // 일반 배열을 쓰면 멤버의 egoing이 개발자인지, duru가 디자이너인지 알 수 없다.
+            let member = ['egoing', 'duru'];
+            console.log(member[0], member[1]);
+
+            let member2 = {developer:'egoing', designer:'duru'};
+            console.log(member2.developer, member2.designer);
+            // 순서가 있고 평등한 것은 배열에 넣으면 된다
+            // 각자의 역할이 다르면 객체지향을 쓴다
+            // 순서가 있는 것을 저장할 때는 배열
+            // 순서없이 이름을 가지고 저장할 때는 객체
+
+            let person = {name:'egoing', city:'seoul', job:'developer'};
+
+            let MyMath = {}
+            MyMath.PI = 3.14;
+            MyMath.sum = function(val1, val2){
+                return val1+val2;
+            }
+        </script>
+    </body>
+</html>

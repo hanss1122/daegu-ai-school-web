@@ -48,31 +48,43 @@
 
 <body>
     
-    <input type="button" id="dnbtn" value="night" onclick="
-        // let button = document.querySelector('#dnbtn');
-        let button = this;
-        // 만약 버튼의 value가 night라면 아래 코드를 실행
-        if(button.value === 'night') {
+    <!-- 함수 만들기 -->
+    <script>
+        function night() {
             document.querySelector('body').style.backgroundColor='black';
             document.querySelector('body').style.color='white';
-            // 버튼의 value를 day로 변경
-            button.value ='day';
-            document.querySelector('#a1').style.color='white';
-            document.querySelector('#a2').style.color='white';
-            document.querySelector('#a3').style.color='white';
-            document.querySelector('#a4').style.color='white';
-            document.querySelector('#a5').style.color='white';
-        } else {
-            // 그렇지 않다면 아래 코드를 실행한다
+            // 배열로 가져와서
+            let as = document.querySelectorAll('a');
+            // 반복문으로 속성 변경 (깔끔)
+            for(let i=0; i<as.length; i=i+1)
+            {
+               as[i].style.color='white';
+            }
+        }
+        function day() {
             document.querySelector('body').style.backgroundColor='white';
             document.querySelector('body').style.color='black';
-            // 버튼의 value를 night로 변경
-            button.value ='night';
+            // 반복문을 사용하지 않고 속성 변경 (지저분)
             document.querySelector('#a1').style.color='black';
             document.querySelector('#a2').style.color='black';
             document.querySelector('#a3').style.color='black';
             document.querySelector('#a4').style.color='black';
             document.querySelector('#a5').style.color='black';
+        }
+    </script>
+    <input type="button" id="dnbtn" value="night" onclick="
+        // let button = document.querySelector('#dnbtn');
+        let button = this;
+        // 만약 버튼의 value가 night라면 아래 코드를 실행
+        if(button.value === 'night') {
+            night();
+            // 버튼의 value를 day로 변경
+            button.value ='day';
+        } else {
+            // 그렇지 않다면 아래 코드를 실행한다
+            day();
+            // 버튼의 value를 night로 변경
+            button.value ='night';
         }
     ">
 
