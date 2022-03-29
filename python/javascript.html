@@ -32,8 +32,8 @@
         </script>
         <h1>Array</h1>
         <script>
-            let member = ['egoing', 'duru', 'teaho']
-            console.log(memeber[0])
+            let member = ['egoing', 'duru', 'teaho'];
+            console.log(member[0]);
         </script>
         <h1>Variable</h1>
         <script>
@@ -45,5 +45,71 @@
             부가가치세 = 0.1
             alert(가격*부가가치세)
         </script>
+        
+        <!-- 220329 복습 -->
+        <!-- 6.boolean.py와 비교 -->
+        <h1>Boolen & comparison operator</h1>
+        <script>
+            console.log(true);
+            console.log(false);
+            console.log(1===1); // true
+            console.log(1===2); // false
+            console.log(1>2); // false
+            console.log(1<2); // true
+        </script>
+
+        <!-- 7.conditional.py와 비교 -->
+        <h1>Conditional Statement</h1>
+        <script>
+            console.log(1)
+            if(true){
+                console.log(2)
+                console.log(3)
+            }
+            console.log(4)
+            
+            console.log(1)
+            if(false){
+                console.log(2)
+                console.log(3)
+            }
+            console.log(4)
+        </script>
+
+        <!-- 7.conditional.app.py와 비교 -->
+        <!-- <h1>JavaScript</h1>
+        <input type="button" value="login" onclick="
+            // let myname = "admin";
+            let getname = document.prompt("이름?");
+            if(name==="admin"){
+                alert('안녕하세요')
+            } else {
+                alert('누구세요?')
+            }
+        "> -->
+        <h1>Loop</h1>
+        <script>
+            member = ['egoing', 'duru']
+            for(let i=0; i<member.length; i=i+1)
+            {
+                document.write('<li>'+member[i]+'</li>');
+            }
+
+            // 객체
+            member = {name:'egoing', city:'seoul'}
+        </script>
+        <!-- 9.funtion.py과 비교 -->
+        <h1>Funtion</h1>
+        <script>
+            function sum(a,b) {
+                return a+b;
+            }
+            print(sum(10,20));
+        </script>
+        <h1>실습</h1>
+        <input type="button" value="부가세계산기" onclick="
+            let 가격 = Number(prompt('가격?'));
+            alert(가격*0.1);
+        ">
     </body>
 </html>
